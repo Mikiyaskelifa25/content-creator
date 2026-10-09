@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #0B0D10;
+    --foreground: #F8FAFC;
+    --card: #11151B;
+    --card-foreground: #F8FAFC;
+    --border: #1E2633;
+    --muted: #181D24;
+    --muted-foreground: #94A3B8;
+  }
+}
+
+body {
+  background-color: #0B0D10;
+  color: #F8FAFC;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Custom scrollbars for serious analytics feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0D10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E2633;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+@media print {
+  body {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+  }
+  aside, header, nav, button, .print-hidden {
+    display: none !important;
+  }
+  .print-card {
+    background: #FFFFFF !important;
+    color: #0F172A !important;
+    border: 1px solid #CBD5E1 !important;
+    box-shadow: none !important;
+  }
+  .print-surface {
+    background: #F8FAFC !important;
+    color: #0F172A !important;
+    border: 1px solid #E2E8F0 !important;
+  }
+  .print-text-dark {
+    color: #0F172A !important;
+  }
+  .print-text-muted {
+    color: #475569 !important;
+  }
+}
+
+
